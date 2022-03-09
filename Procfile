@@ -1,2 +1,2 @@
 server: make
-app: cd app && yarn dev
+app: cd app && yarn && yarn dev

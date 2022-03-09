@@ -11,8 +11,8 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => Promise.resolve('Hello World!')
-  }
+    hello: () => Promise.resolve("Hello World!"),
+  },
 };
 
 /**

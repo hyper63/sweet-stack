@@ -76,6 +76,9 @@ Makefile
 ```
 dev:
 	@deno run --allow-net --allow-read --allow-env --import-map=./import_map.json src/server.js
+
+test:
+	@deno fmt src && deno lint src && deno test src
 ```
 
 import_map.json
@@ -196,6 +199,14 @@ query {
 }
 ```
 
+### Test
+
+```sh
+make test
+```
+
+---
+
 ## SvelteJS
 
 Setting up Svelte is the exact same process as https://svelte.dev
@@ -239,7 +250,7 @@ Create a `Procfile` in the project root directory
 
 ```
 server: make
-app: cd app && yarn dev
+app: cd app && yarn && yarn dev
 ```
 
 Now, we can run both our server and app with one command:
@@ -247,3 +258,17 @@ Now, we can run both our server and app with one command:
 ```sh
 nf start
 ```
+
+## Bonus
+
+- Comming Soon
+
+## Contributing
+
+We welcome suggestions and improvements to this stack, especially if there are
+better approaches to running parallel tasks or any other items, like dependency
+management, etc.
+
+## License
+
+MIT
