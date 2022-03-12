@@ -38,7 +38,7 @@ serve((req) => {
 function serveStatic(file, type) {
   return async () =>
     new Response(
-      await Deno.readTextFile(file),
+      await Deno.readFile(file),
       {
         headers: { "content-type": type },
       },
